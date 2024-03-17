@@ -11,7 +11,7 @@ public interface WhitelistCodeService {
     /**
      * 生成验证码，如果同一个人重新创建，则旧的验证码立即失效
      */
-    int create(@NotNull UUID id, @NotNull String name) throws Exception;
+    @NotNull WhitelistCodeInfo create(@NotNull UUID id, @NotNull String name) throws Exception;
 
     /**
      * 根据验证码取出信息
