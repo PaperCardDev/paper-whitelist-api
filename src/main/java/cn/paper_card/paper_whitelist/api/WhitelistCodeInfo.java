@@ -6,6 +6,7 @@ public record WhitelistCodeInfo(
         int code,
         UUID id,
         String name,
+        long createTime,
         long expires
 ) {
 }
