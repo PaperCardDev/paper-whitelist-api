@@ -23,6 +23,8 @@ public interface WhitelistCodeService {
      */
     @Nullable WhitelistCodeInfo query(@NotNull UUID id) throws Exception;
 
+    @Nullable WhitelistCodeInfo take(@NotNull UUID id) throws Exception;
+
     /**
      * 清理过期的验证码
      *
