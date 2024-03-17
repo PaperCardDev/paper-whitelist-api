@@ -19,7 +19,14 @@ public interface WhitelistCodeService {
     @Nullable WhitelistCodeInfo take(int code) throws Exception;
 
     /**
-     * 判断验证码是否已经过期
+     * 根据用户ID查询
      */
-    boolean isOutdated(@NotNull WhitelistCodeInfo info);
+    @Nullable WhitelistCodeInfo query(@NotNull UUID id) throws Exception;
+
+    /**
+     * 清理过期的验证码
+     *
+     * @return 删除的验证码个数
+     */
+    int deleteExpires() throws Exception;
 }
