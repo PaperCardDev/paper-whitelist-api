@@ -7,10 +7,5 @@ import org.jetbrains.annotations.Nullable;
 public interface PaperWhitelistApi {
     @NotNull WhitelistService getWhitelistService();
 
-    @NotNull WhitelistCodeService getWhitelistCodeService();
-
-    @Nullable Object getServletContextHandler();
-
     void onPreLoginCheck(@NotNull Object event, @Nullable Object suffix);
-
 }

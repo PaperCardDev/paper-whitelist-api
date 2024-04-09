@@ -3,7 +3,6 @@ package cn.paper_card.paper_whitelist.api;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
-import java.util.List;
 import java.util.UUID;
 
 @SuppressWarnings("unused")
@@ -33,14 +32,4 @@ public interface WhitelistService {
      * @throws Exception 查询失败抛出异常
      */
     @Nullable WhitelistInfo query(@NotNull UUID userId) throws Exception;
-
-    /**
-     * 分页查询
-     */
-    @NotNull List<WhitelistInfo> queryPage(int limit, int offset) throws Exception;
-
-    /**
-     * 在备注信息中搜索
-     */
-    @NotNull List<WhitelistInfo> search(@NotNull String keyWord, int limit, int offset) throws Exception;
 }
